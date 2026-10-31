@@ -68,7 +68,7 @@ const characters = [
     firstName: "Spek",
     lastName: "Cloudveil",
     color: "#f277b8",
-    image: "DEF/Spek.png",
+    image: "DEF/SPEK.png",
     role: "Monarca de las nubes",
     coverLines: [
       "Reina dulce",
