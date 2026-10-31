@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>DIVINE — Edición de aniversario</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,700;1,6..96,400&family=Inter:wght@400;500&family=Great+Vibes&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/entrance.css">
+  <link rel="stylesheet" href="css/book.css">
+  <link rel="stylesheet" href="css/covers.css">
+  <link rel="stylesheet" href="css/pages.css">
+  <link rel="stylesheet" href="css/love.css">
+</head>
+<body>
+  <div class="gate" id="gate">
+    <div class="eyebrow">Edición de aniversario · Número 01</div>
+    <h1 id="gate-logo" aria-label="DIVINE"></h1>
+    <p>Bienvenida a un número hecho a mano, solo para ti.</p>
+    <button id="enter-button">Enter the magazine</button>
+  </div>
+
+  <nav class="site-nav" id="site-nav"></nav>
+  <div class="stage"><div class="book" id="book"></div></div>
+  <div class="page-controls">
+    <button id="previous-page" aria-label="Página anterior">‹</button>
+    <span id="page-counter"></span>
+    <button id="next-page" aria-label="Página siguiente">›</button>
+  </div>
+
+  <!-- Orden importante: registro → contenido → plantillas → lógica -->
+  <script src="js/registry.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/content/site.js"></script>
+  <script src="js/content/characters.js"></script>
+  <script src="js/content/features.js"></script>
+  <script src="js/content/love.js"></script>
+  <script src="js/templates/covers.js"></script>
+  <script src="js/templates/character-pages.js"></script>
+  <script src="js/templates/feature-pages.js"></script>
+  <script src="js/templates/love-section.js"></script>
+  <script src="js/pages.js"></script>
+  <script src="js/navigation.js"></script>
+  <script src="js/entrance.js"></script>
+  <script src="js/love.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

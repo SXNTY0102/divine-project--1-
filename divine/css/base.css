@@ -1,0 +1,5 @@
+:root{--serif:"Bodoni Moda","Didot","Bodoni 72",Georgia,serif;--sans:"Inter",Helvetica,Arial,sans-serif;--paper:#fbf8f3;--ink:#111;--crimson:#F766A8;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0}
+body{background:#0c0c0c;color:var(--ink);font-family:var(--serif);overflow:hidden}

@@ -1,0 +1,72 @@
+/* ═══ CANDADO (estética de la revista: negro y papel) ═══ */
+.closing__secret{border-color:var(--crimson)!important;color:var(--crimson)}
+.closing__secret:hover{background:var(--crimson)!important;color:#fff!important}
+.passcode{position:fixed;inset:0;z-index:90;display:flex;align-items:center;justify-content:center;padding:20px;background:rgba(0,0,0,.8);backdrop-filter:blur(8px);opacity:0;visibility:hidden;transition:opacity .4s,visibility .4s}
+.passcode.is-open{opacity:1;visibility:visible}
+.passcode__card{width:min(340px,100%);padding:30px 24px;background:var(--paper);color:#111;text-align:center;font-family:var(--serif)}
+.passcode__card h3{margin:.3em 0;font-weight:400;font-size:32px}
+.passcode__dots{display:flex;justify-content:center;gap:14px;margin:20px 0 10px}
+.passcode__dots i{width:14px;height:14px;border:1px solid #000;border-radius:50%;transition:.2s}
+.passcode__dots i.is-filled{background:#000}
+.passcode__message{min-height:1.6em;margin:0;font:500 11px var(--sans);letter-spacing:.18em;text-transform:uppercase;color:#777}
+.passcode__keys{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:14px}
+.passcode__keys button{padding:16px 0;font:400 24px var(--serif);background:none;border:1px solid #000;cursor:pointer;transition:.2s}
+.passcode__keys button:hover{background:#000;color:#fff}
+.passcode__keys button:disabled{opacity:.3;pointer-events:none}
+.passcode.is-denied .passcode__card{animation:shake .5s}
+.passcode.is-denied .passcode__dots i{background:var(--crimson);border-color:var(--crimson)}
+.passcode.is-denied .passcode__message{color:var(--crimson)}
+@keyframes shake{20%{transform:translateX(-10px)}40%{transform:translateX(10px)}60%{transform:translateX(-6px)}80%{transform:translateX(6px)}}
+
+/* ═══ SECCIÓN ROMÁNTICA (estética propia: rosa, crema, caligrafía) ═══ */
+.love{--rose:#d96b86;--wine:#7b2b43;--gold:#c9a46a;position:fixed;inset:0;z-index:100;overflow-x:hidden;overflow-y:auto;color:var(--wine);font-family:"Cormorant Garamond",Georgia,serif;
+  background:radial-gradient(circle at 12% 8%,#ffe0e8 0,transparent 45%),radial-gradient(circle at 88% 38%,#ffd6e0 0,transparent 42%),radial-gradient(circle at 18% 92%,#fff0d8 0,transparent 46%),#fff8f3;
+  padding:env(safe-area-inset-top,0px) 0 env(safe-area-inset-bottom,0px);
+  clip-path:circle(0% at 50% 60%);visibility:hidden;transition:clip-path 1.6s cubic-bezier(.7,0,.2,1),visibility 0s 1.6s}
+.love.is-open{clip-path:circle(150% at 50% 60%);visibility:visible;transition:clip-path 1.6s cubic-bezier(.7,0,.2,1)}
+.love > *{position:relative;z-index:1}
+.love__hearts{position:fixed!important;inset:0;z-index:0!important;pointer-events:none;overflow:hidden}
+.love__heart{position:absolute;bottom:-8%;color:var(--rose);opacity:0;animation:float-up linear infinite}
+@keyframes float-up{0%{transform:translateY(0) rotate(0);opacity:0}10%{opacity:.5}100%{transform:translateY(-115vh) rotate(40deg);opacity:0}}
+.love__close{position:fixed!important;top:calc(12px + env(safe-area-inset-top,0px));right:14px;z-index:5!important;width:42px;height:42px;border-radius:50%;border:1px solid var(--rose);background:rgba(255,255,255,.7);color:var(--wine);font-size:16px;cursor:pointer}
+.love__reveal{opacity:0;transform:translateY(34px);transition:opacity 1.2s,transform 1.2s}
+.love__reveal.is-visible{opacity:1;transform:none}
+.love__hero{min-height:92vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:8vh 6vw}
+.love__eyebrow{margin:0;font-style:italic;font-size:22px;letter-spacing:.12em;color:var(--rose)}
+.love h2,.love h3,.love__greeting,.love__signature,.memory figcaption{font-family:"Great Vibes","Brush Script MT",cursive;font-weight:400}
+.love h2{margin:.1em 0;font-size:clamp(84px,24vw,200px);line-height:1;color:var(--wine);text-shadow:0 6px 30px rgba(217,107,134,.35)}
+.love__subtitle{margin:0;font-size:clamp(22px,4vw,34px);font-style:italic}
+.love__scroll{margin-top:7vh;font-size:30px;color:var(--rose);animation:bob 1.8s ease-in-out infinite}
+@keyframes bob{50%{transform:translateY(10px)}}
+.love__letter{width:min(660px,90%);margin:0 auto 14vh;padding:clamp(28px,6vw,56px);background:#fffdf9;box-shadow:0 22px 50px rgba(123,43,67,.18);transform:rotate(-.6deg);
+  background-image:repeating-linear-gradient(transparent 0 33px,rgba(217,107,134,.2) 33px 34px)}
+.love__letter p{margin:0 0 34px;font-size:clamp(20px,2.6vw,24px);line-height:34px}
+.love__greeting{font-size:clamp(40px,7vw,56px)!important;line-height:56px!important;margin-bottom:18px!important}
+.love__signature{text-align:right;font-size:clamp(34px,6vw,46px)!important;color:var(--rose)}
+.love__memories{padding:0 6vw}
+.love__memories h3{margin:0 0 6vh;text-align:center;font-size:clamp(48px,9vw,84px);line-height:1}
+.love__gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:44px 30px;max-width:1100px;margin:0 auto}
+.memory{position:relative;margin:0;padding:12px 12px 0;background:#fff;box-shadow:0 14px 28px rgba(123,43,67,.2);transform:rotate(var(--tilt));transition:transform .5s cubic-bezier(.2,.8,.2,1);cursor:pointer}
+.memory:hover{transform:rotate(0) translateY(-8px) scale(1.03)}
+.memory__tape{position:absolute;top:-14px;left:50%;width:92px;height:28px;background:rgba(201,164,106,.45);transform:translateX(-50%) rotate(-3deg)}
+.memory__photo{aspect-ratio:1;background:#f8dfe6 center/cover no-repeat;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px}
+.memory__photo.is-empty::before{content:"♡";font-size:56px;color:var(--rose);opacity:.65}
+.memory__photo.is-empty::after{content:"tu foto aquí";font-style:italic;font-size:18px;color:var(--wine);opacity:.6}
+.memory figcaption{padding:12px 4px 16px;text-align:center;font-size:30px;line-height:1.1}
+.memory figcaption small{display:block;margin-top:4px;font:italic 16px "Cormorant Garamond",serif;opacity:.7}
+.memory--oval,.memory--arch{padding:0;background:none;box-shadow:none}
+.memory--oval .memory__tape,.memory--arch .memory__tape{display:none}
+.memory--oval .memory__photo,.memory--arch .memory__photo{aspect-ratio:3/4;border:8px solid #fff;outline:2px solid var(--gold);box-shadow:0 14px 28px rgba(123,43,67,.22)}
+.memory--oval .memory__photo{border-radius:50%}
+.memory--arch .memory__photo{border-radius:999px 999px 8px 8px}
+.love__finale{padding:14vh 6vw 16vh;text-align:center}
+.love__finale p{margin:0;font-size:clamp(24px,4vw,34px);font-style:italic}
+.love__big-heart{display:block;margin:20px 0;font-size:84px;color:var(--rose);animation:beat 1.6s ease-in-out infinite}
+@keyframes beat{15%{transform:scale(1.18)}30%{transform:scale(1)}45%{transform:scale(1.12)}}
+.love__back{padding:14px 28px;border:1px solid var(--wine);border-radius:999px;background:none;color:var(--wine);font:italic 20px "Cormorant Garamond",serif;cursor:pointer;transition:.3s}
+.love__back:hover{background:var(--wine);color:#fff}
+.love-lightbox{position:fixed;inset:0;z-index:120;display:flex;align-items:center;justify-content:center;padding:20px;background:rgba(60,15,30,.88);opacity:0;visibility:hidden;transition:.4s;cursor:zoom-out}
+.love-lightbox.is-open{opacity:1;visibility:visible}
+.love-lightbox figure{margin:0;text-align:center;color:#fff}
+.love-lightbox img{max-width:100%;max-height:80vh;border:10px solid #fff;box-shadow:0 20px 60px rgba(0,0,0,.5)}
+.love-lightbox figcaption{margin-top:14px;font:34px "Great Vibes",cursive}

@@ -1,0 +1,12 @@
+/* ENTRADA */
+.gate{position:fixed;inset:0;z-index:50;background:#000;color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:5vw;
+transition:transform 1.5s cubic-bezier(.77,0,.18,1)}
+.gate.open{transform:translateY(-101%)}
+.gate .eyebrow,.gate small{font:500 11px/1 var(--sans);letter-spacing:.35em;text-transform:uppercase;opacity:0;animation:fade-in 1.4s 1.6s forwards}
+.gate h1{margin:4vh 0 3vh;font-weight:700;font-size:clamp(64px,21vw,320px);line-height:.9;display:flex;transition:transform 1.4s cubic-bezier(.77,0,.18,1),letter-spacing 1.4s}
+.gate.open h1{transform:scale(1.15)}
+.gate h1 span{opacity:0;transform:translateY(40px);animation:rise 1.2s cubic-bezier(.2,.7,.2,1) forwards}
+.gate p{font-style:italic;font-size:clamp(18px,2.6vw,32px);margin:0 0 6vh;opacity:0;animation:fade-in 1.4s 1.9s forwards}
+.gate button{font:500 12px var(--sans);letter-spacing:.3em;text-transform:uppercase;color:#fff;background:none;border:1px solid #fff;padding:18px 34px;cursor:pointer;opacity:0;animation:fade-in 1.4s 2.3s forwards;transition:background .4s,color .4s}
+.gate button:hover{background:#fff;color:#000}
+@keyframes rise{to{opacity:1;transform:none}}@keyframes fade-in{to{opacity:1}}
